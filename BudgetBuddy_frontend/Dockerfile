@@ -2,11 +2,11 @@ FROM node:18 AS build
 
 WORKDIR /app
 
-COPY /BudgetBuddy_frontend/package*.json ./
+COPY  package*.json ./
 
 RUN npm install
 
-COPY /BudgetBuddy_frontend ./
+COPY . . 
 
 RUN npm run build
 
