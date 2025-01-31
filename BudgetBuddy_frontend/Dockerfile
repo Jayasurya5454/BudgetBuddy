@@ -1,21 +1,21 @@
+# Use the multi-stage build
 FROM node:18 AS build
 
 WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm install
 
 COPY . .
-
 RUN npm run build
 
+# Stage 2: Serve with Nginx
 FROM nginx:alpine
 
-# Copy custom nginx configuration
+# Copy the custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy the built application to nginx's default directory
+# Copy the built application
 COPY --from=build /app/dist /usr/share/nginx/html
 
 EXPOSE 80
