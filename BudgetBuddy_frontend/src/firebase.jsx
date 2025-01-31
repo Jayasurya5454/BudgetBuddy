@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, EmailAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBtD5QiHF_VXgXpDyuyvCpeeNEZ_v91N4g",
-  authDomain: "expensetracker-2a3e4.firebaseapp.com",
-  projectId: "expensetracker-2a3e4",
-  storageBucket: "expensetracker-2a3e4.appspot.com",
-  messagingSenderId: "258504388610",
-  appId: "1:258504388610:web:24b93485a44af3db9af71b",
-  measurementId: "G-GR5RNYT101"
+  apiKey: "AIzaSyAURl5mgN2CAD3mJViC5AjhDfVpJFRhwAk",
+  authDomain: "budgetbuddy-e35dc.firebaseapp.com",
+  projectId: "budgetbuddy-e35dc",
+  storageBucket: "budgetbuddy-e35dc.firebasestorage.app",
+  messagingSenderId: "898980477707",
+  appId: "1:898980477707:web:b009f7740a8dd25bfb800e",
+  measurementId: "G-DGYKRQRX79"
 };
 
 const app = initializeApp(firebaseConfig);
