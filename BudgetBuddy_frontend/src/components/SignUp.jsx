@@ -14,7 +14,7 @@ const SignUp = () => {
   // Function to send user details to the backend
   const saveUserDetailsToMongoDB = async (userDetails) => {
     try {
-      const response = await fetch('http://localhost:3000/saveUser', {
+      const response = await fetch('${import.meta.env.VITE_BACKEND_URL}/api/saveUser', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userDetails),
@@ -158,12 +158,7 @@ const SignUp = () => {
               Sign Up with Email
             </button>
           </form>
-          {/* <button
-            onClick={handleGoogleSignUp}
-            className="w-full p-3 bg-red-500 text-white rounded-lg text-lg font-semibold hover:bg-red-600 transition duration-300"
-          >
-            Continue with Google
-          </button> */}
+
         </div>
       </div>
       <ToastContainer />

@@ -37,7 +37,7 @@ const GenerateReport = () => {
 
         try {
             const response = await axios.get(
-                `http://localhost:3000/getexpensesinrange?user=${userId}&startDate=${startDate}&endDate=${endDate}`
+                `${import.meta.env.VITE_BACKEND_URL}/api/getexpensesinrange?user=${userId}&startDate=${startDate}&endDate=${endDate}`
             );
 
             if (response.data.length === 0) {
@@ -60,7 +60,7 @@ const GenerateReport = () => {
     const fetchBudgetData = async (uid, expenses) => {
         try {
             const response = await axios.get(
-                `http://localhost:3000/getbudgetdata?user=${uid}`
+                `${import.meta.env.VITE_BACKEND_URL}/api/getbudgetdata?user=${uid}`
             );
 
             const allBudgets = response.data;

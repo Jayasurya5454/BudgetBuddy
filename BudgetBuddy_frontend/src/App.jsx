@@ -10,6 +10,8 @@ import DashboardContent from './components/dashboardcontent.jsx';
 import GenerateReport from './components/generate.jsx';
 import AddReminder from './components/addremainder.jsx';
 
+
+
 function App() {
   return (
     <Router>

@@ -17,7 +17,7 @@ const Expenses = () => {
     // Function to load recent expenses
     const loadRecentExpenses = async (uid) => {
         try {
-            const response = await axios.get(`http://localhost:3000/getlatestexpenses?user=${uid}`);
+            const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/getlatestexpenses?user=${uid}`);
             setExpenses(response.data); // Set the expenses from the response
         } catch (err) {
             console.error("Error fetching recent expenses:", err);

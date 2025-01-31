@@ -39,7 +39,7 @@ const AddReminder = () => {
 
         try {
             // Send reminder data to the backend
-            const response = await axios.post('http://localhost:3000/remainders', {
+            const response = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/remainders`, {
                 userId, // Use the user ID from Firebase
                 name,
                 amount,
