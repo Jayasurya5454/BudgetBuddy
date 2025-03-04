@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, EmailAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAURl5mgN2CAD3mJViC5AjhDfVpJFRhwAk",
-  authDomain: "budgetbuddy-e35dc.firebaseapp.com",
-  projectId: "budgetbuddy-e35dc",
-  storageBucket: "budgetbuddy-e35dc.firebasestorage.app",
-  messagingSenderId: "898980477707",
-  appId: "1:898980477707:web:b009f7740a8dd25bfb800e",
-  measurementId: "G-DGYKRQRX79"
-};
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
